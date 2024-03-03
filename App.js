@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
+import Router from "./src/router/router";
+import 'react-native-gesture-handler';
 
 export default function App() {
   return (
-    <View className="flex-1 justify-center items-center ">
-      <Text className="font-bold">Open up App.js!</Text>
+    <View>
       <StatusBar style="auto" />
+      <Router />
     </View>
   );
 }
