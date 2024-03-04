@@ -1,5 +1,5 @@
 // Datos de categorías
-const categorias = [
+const categories = [
   { id: 1, nombre: "Robusta" },
   { id: 2, nombre: "Liberica" },
   { id: 3, nombre: "Excelsa" },
@@ -9,4 +9,4 @@ const categorias = [
   { id: 7, nombre: "Latte" },
 ];
 
-export { categorias };
+export { categories };

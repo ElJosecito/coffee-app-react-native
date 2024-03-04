@@ -1,5 +1,5 @@
-// Datos de productos con identificadores únicos, categorías asignadas y propiedad de azúcar
-const productos = [
+// Datos de products con identificadores únicos, categorías asignadas y propiedad de azúcar
+const products = [
   {
     id: 1,
     nombre: "Espresso",
@@ -83,31 +83,56 @@ const productos = [
 ];
 
 // Duplicar cada producto con y sin azúcar
-const productosConAzucar = productos.map((producto) => {
+const productsWithSugar = products.map((producto) => {
   return {
     ...producto,
-    id: producto.id + productos.length,
-    nombre: producto.nombre + " con Azúcar",
+    id: producto.id + products.length,
+    nombre: producto.nombre,
     azucar: true,
   };
 });
 
-const productosSinAzucar = productos.map((producto) => {
-  return {
-    ...producto,
-    id: producto.id + productos.length * 2,
-    nombre: producto.nombre + " sin Azúcar",
-    azucar: false,
-  };
-});
 
-// Combinar los productos originales con los productos con y sin azúcar
-const todosLosProductos = [
-  ...productos,
-  ...productosConAzucar,
-  ...productosSinAzucar,
+//best selling products
+const bestSellingProducts = [
+  {
+    id: 1,
+    nombre: "Espresso",
+    descripcion:
+      "Un café fuerte y concentrado hecho al forzar agua caliente a través de granos de café finamente molidos.",
+    precio: 2.5,
+    imagen: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg",
+    categoriaId: 4, // Espresso
+    azucar: false,
+  },
+  {
+    id: 2,
+    nombre: "Americano",
+    descripcion:
+      "Un café suave y ligero hecho con una o dos partes de espresso y agua caliente.",
+    precio: 2.0,
+    imagen: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg",
+    categoriaId: 5, // Americano
+    azucar: false,
+  },
+  {
+    id: 3,
+    nombre: "Cappuccino",
+    descripcion:
+      "Un café italiano clásico hecho con partes iguales de espresso, leche vaporizada y espuma de leche.",
+    precio: 3.0,
+    imagen: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg",
+    categoriaId: 6, // Cappuccino
+    azucar: false,
+  },
+]
+
+// Combinar los products originales con los products con y sin azúcar
+const allProducts = [
+  ...products,
+  ...productsWithSugar,
 ];
 
-// Ahora tienes todos los productos con y sin azúcar para cada café.
+// Ahora tienes todos los products con y sin azúcar para cada café.
 
-export { todosLosProductos };
+export { allProducts, bestSellingProducts };
