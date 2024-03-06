@@ -19,15 +19,17 @@ import { FontAwesome6, Feather, Fontisto } from "@expo/vector-icons";
 import { categories } from "../data/categories";
 import { allProducts, bestSellingProducts } from "../data/products";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const dismissKeyboard = () => {
     Keyboard.dismiss();
   };
 
   return (
     <ScrollView
-    showsVerticalScrollIndicator={false} 
-    className="bg-[#FBFBFB] flex-1" style={{ marginBottom: 82 }}>
+      showsVerticalScrollIndicator={false}
+      className="bg-[#FBFBFB] flex-1"
+      style={{ marginBottom: 82 }}
+    >
       <View className="flex-1">
         <View className="flex-row justify-between items-center p-3 pb-0">
           <Image
@@ -100,28 +102,34 @@ const HomeScreen = () => {
               horizontal
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
-                <View
-                  className="flex-col p-2 mx-1 rounded-lg bg-[#FFFFFF]"
-                  style={styles.shadow}
+                <Pressable
+                  onPress={() => {
+                    navigation.push("details");
+                  }}
                 >
-                  <Image
-                    className="h-32 w-40 rounded-lg"
-                    source={{ uri: item.imagen }}
-                  />
+                  <View
+                    className="flex-col p-2 mx-1 rounded-lg bg-[#FFFFFF]"
+                    style={styles.shadow}
+                  >
+                    <Image
+                      className="h-32 w-40 rounded-lg"
+                      source={{ uri: item.imagen }}
+                    />
 
-                  <Text className="text-sm font-bold">{item.nombre}</Text>
-                  {item.azucar ? (
-                    <Text className="text-sm ">Con Azúcar</Text>
-                  ) : (
-                    <Text className="text-sm">Sin Azúcar</Text>
-                  )}
-                  <View className="flex-row justify-between items-center">
-                    <Text className="text-sm font-bold">${item.precio}</Text>
-                    <View className="flex-row items-center bg-[#00582F] rounded-full p-1">
-                      <FontAwesome6 name="plus" size={18} color="white" />
+                    <Text className="text-sm font-bold">{item.nombre}</Text>
+                    {item.azucar ? (
+                      <Text className="text-sm ">Con Azúcar</Text>
+                    ) : (
+                      <Text className="text-sm">Sin Azúcar</Text>
+                    )}
+                    <View className="flex-row justify-between items-center">
+                      <Text className="text-sm font-bold">${item.precio}</Text>
+                      <View className="flex-row items-center bg-[#00582F] rounded-full p-1">
+                        <FontAwesome6 name="plus" size={18} color="white" />
+                      </View>
                     </View>
                   </View>
-                </View>
+                </Pressable>
               )}
             />
           </View>
