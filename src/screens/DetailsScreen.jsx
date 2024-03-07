@@ -4,7 +4,7 @@ import React from 'react'
 const DetailsScreen = () => {
   return (
     <View>
-      <Text>DetailsScreen</Text>
+      <Text>Waos</Text>
     </View>
   )
 }
