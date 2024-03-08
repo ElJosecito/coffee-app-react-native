@@ -26,7 +26,6 @@ const BottomNav = () => {
         tabBarShowLabel: false,
         tabBarStyle: styles.tabBarStyle,
       }}
-      className="bg-black"
     >
       <Tab.Screen
         name="Home"
@@ -42,7 +41,7 @@ const BottomNav = () => {
             >
               <FontAwesome
                 name="home"
-                size={24}
+                size={focused ? 28 : 24}
                 color={focused ? "white" : "grey"}
               />
             </View>
@@ -63,7 +62,7 @@ const BottomNav = () => {
             >
               <FontAwesome
                 name="shopping-cart"
-                size={24}
+                size={focused ? 28 : 24}
                 color={focused ? "white" : "grey"}
               />
               
@@ -85,7 +84,7 @@ const BottomNav = () => {
             >
               <FontAwesome
                 name="heart"
-                size={24}
+                size={focused ? 28 : 24}
                 color={focused ? "white" : "grey"}
               />     
             </View>
@@ -106,7 +105,7 @@ const BottomNav = () => {
             >
               <FontAwesome
                 name="user"
-                size={24}
+                size={focused ? 28 : 24}
                 color={focused ? "white" : "grey"}
               />
             </View>
@@ -123,9 +122,6 @@ const styles = StyleSheet.create({
   tabBarStyle: {
     height: 80,
     position: "absolute",
-    backgroundColor: "black",
-    borderTopWidth: 0,
-    elevation: 0,
-    borderTopColor: "transparent",
+    backgroundColor: "#00582F",
   },
 });
