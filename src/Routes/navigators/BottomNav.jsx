@@ -26,6 +26,7 @@ const BottomNav = () => {
         tabBarShowLabel: false,
         tabBarStyle: styles.tabBarStyle,
       }}
+      className="bg-black"
     >
       <Tab.Screen
         name="Home"
@@ -44,15 +45,6 @@ const BottomNav = () => {
                 size={24}
                 color={focused ? "white" : "grey"}
               />
-              <Text
-                style={{
-                  color: focused ? "white" : "grey",
-                  fontSize: 12,
-                  top: 5,
-                }}
-              >
-                Home
-              </Text>
             </View>
           ),
         }}
@@ -74,15 +66,7 @@ const BottomNav = () => {
                 size={24}
                 color={focused ? "white" : "grey"}
               />
-              <Text
-                style={{
-                  color: focused ? "white" : "grey",
-                  fontSize: 12,
-                  top: 5,
-                }}
-              >
-                Cart
-              </Text>
+              
             </View>
           ),
         }}
@@ -103,16 +87,7 @@ const BottomNav = () => {
                 name="heart"
                 size={24}
                 color={focused ? "white" : "grey"}
-              />
-              <Text
-                style={{
-                  color: focused ? "white" : "grey",
-                  fontSize: 12,
-                  top: 5,
-                }}
-              >
-                Favorite
-              </Text>
+              />     
             </View>
           ),
         }}
@@ -134,15 +109,6 @@ const BottomNav = () => {
                 size={24}
                 color={focused ? "white" : "grey"}
               />
-              <Text
-                style={{
-                  color: focused ? "white" : "grey",
-                  fontSize: 12,
-                  top: 5,
-                }}
-              >
-                User
-              </Text>
             </View>
           ),
         }}

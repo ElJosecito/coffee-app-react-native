@@ -30,7 +30,7 @@ const Routes = () => {
             name="details"
             component={DetailsScreen}
             options={{
-              title: false
+              headerShown: false,
             }}
           />
         </Stack.Navigator>
