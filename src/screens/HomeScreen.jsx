@@ -104,7 +104,12 @@ const HomeScreen = ({ navigation }) => {
               renderItem={({ item }) => (
                 <Pressable
                   onPress={() => {
-                    navigation.push("details");
+                    navigation.push("details", {
+                      image: item.imagen,
+                      name: item.nombre,
+                      price: item.precio,
+                      
+                    });
                   }}
                 >
                   <View

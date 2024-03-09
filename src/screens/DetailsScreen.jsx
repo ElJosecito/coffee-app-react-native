@@ -1,14 +1,16 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 
-const DetailsScreen = () => {
+const DetailsScreen = ({navigation, route}) => {
+
+  const {name, price, image} = route.params
+
   return (
     <View>
-      <View>
-        <Text>Coffee Name: Latte</Text>
-        <Text>Price: $3.99</Text>
-        <Text>Description: A delicious espresso-based drink made with steamed milk</Text>
-      </View>
+      <Text>Details Screen</Text>
+      <Text>{name}</Text>
+      <Text>{price}</Text>
+      <Image source={{uri: image}} />
     </View>
   )
 }
